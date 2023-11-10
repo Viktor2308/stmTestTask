@@ -1,0 +1,6 @@
+ext{
+    versions = [
+            'SpringDataJdbc' : '3.1.5',
+            'testcontainersPostgresql':'1.19.1'
+    ]
+}
