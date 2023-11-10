@@ -1,22 +1,38 @@
 package com.github.Viktor2308.stmtesttask.entity;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+import java.util.Set;
 import java.util.UUID;
-/*
-Пользователь – субъект, осуществляющий покупку билетов.
-Атрибуты: логин, пароль, ФИО.
+/**
+ User – the entity purchasing tickets.
+ Attributes: id, login, password, full name, list of roles.
  */
 @Getter
 @Setter
-@Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class User{
+    /**
+     * UUID id - unique identifier
+     */
     private UUID id;
+    /**
+     * String login - unique user login
+     */
     private String login;
+    /**
+     * String password - encoded password
+     */
     private String password;
-    private String username;
-    private String lastName;
-    private String surname;
+    /**
+     * String fullName - full username
+     */
+    private String fullName;
+    /**
+     * User role
+     * @see Role
+     */
+    private Role role;
 }
